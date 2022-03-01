@@ -14,7 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view(“Welcome”);
+    return 'Hello World From Laravel v8.X (PHP v7.4.X)';
 });
-
-Route::get('/hello', 'HelloController@hello');
