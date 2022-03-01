@@ -11,10 +11,10 @@ class ProductsController extends Controller
         return view('Products');
     }
 
-//    public function showProduct($id)
-//    {
-//        return view('Product'($id));
-//    }
+    public function showProduct($id)
+    {
+        return view('Product', ['id'=>$id])->with('id', $id);
+    }
 }
 
 
