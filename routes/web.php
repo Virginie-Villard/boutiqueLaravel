@@ -16,6 +16,8 @@ use App\Http\Controllers\CartController;
 |
 */
 
+// @ see : https://laravel.sillo.org/laravel-8/
+
 Route::get('/', [HomeController::class, 'show']);
 
 Route::get('/products', [ProductsController::class, 'show']);
