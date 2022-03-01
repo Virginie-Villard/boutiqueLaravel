@@ -1,4 +1,4 @@
-@extends('Layout')
+@extends('Layouts.Layouts.Layout')
 
 @section('title', 'Home')
 

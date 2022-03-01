@@ -1,6 +1,6 @@
 {{--@see : https://laracasts.com/discuss/channels/laravel/how-to-get-a-title-and-id--}}
 
-@extends('Layout')
+@extends('Layouts.Layout')
 
 @section('title')
     Product {{ $id }}
@@ -9,6 +9,8 @@
 @section('content')
     <h1>Product {{ $id }}</h1>
 @stop
+
+
 
 
 

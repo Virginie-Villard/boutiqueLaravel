@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 <head>
-    @include('Head')
+    @include('Layouts.Layouts.Head')
 </head>
 
 <body>
 <div class="container">
 
     <header class="row">
-        @include('Header')
+        @include('Layouts.Layouts.Header')
     </header>
 
     <div id="main" class="row">
@@ -16,7 +16,7 @@
     </div>
 
     <footer class="row">
-        @include('Footer')
+        @include('Layouts.Layouts.Footer')
     </footer>
 
 </div>
