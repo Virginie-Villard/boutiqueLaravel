@@ -1,5 +1,4 @@
-@extends('Head')
-@extends('Header')
+@extends('Layout')
 
 @section('title', 'Cart')
 
@@ -8,4 +7,3 @@
 @stop
 
 
-@extends('Footer')
