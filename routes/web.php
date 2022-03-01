@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Hello World From Laravel v8.X (PHP v7.4.X)';
+    return 'Home page';
+});
+
+Route::get('/products', function () {
+    return 'Products list';
+});
+
+Route::get('/product/{id}', function ($id) {
+    return 'Product ' . $id;
+});
+
+Route::get('/cart', function () {
+    return 'Cart';
 });
