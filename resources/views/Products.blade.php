@@ -6,12 +6,14 @@
     <h1>Products list</h1>
 
     @foreach($products as $product)
-{{--        <a href="{{ $product }}">--}}
+        <div class="prods">
+        <a href="Product.blade.php">
             <h2>{{ $product->name }}</h2>
             <p><img src="{{ $product->image }}"/></p>
             <p>{{ $product->description }}</p>
-            <p>{{ $product->price }}</p>
-{{--        </a>--}}
+            <p class="price">{{ $product->price }} €</p>
+        </a>
+        </div>
     @endforeach
 @stop
 
@@ -24,7 +26,30 @@
 
     .price
     {
-        font-size: 16px;
+        font-size: 20px;
+        color: #067606;
+        font-weight: bold;
+    }
+
+    h2
+    {
+        color: #067606;
+    }
+
+    p
+    {
+        color: black;
+    }
+
+    a:link
+    {
+        text-decoration: none;
+    }
+
+    h2:hover
+    {
+        text-decoration: rgba(25, 181, 25, 0.28);
+        text-decoration-thickness: 10px;
     }
 
 </style>
