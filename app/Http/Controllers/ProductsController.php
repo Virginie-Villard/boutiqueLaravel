@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
     public function show()
     {
-        return view('Products');
+        $products = DB::table('products')->get();
+        //dd($products);
+        return view('Products', ['products'=>$products]);
     }
 
     public function showProduct($id)
