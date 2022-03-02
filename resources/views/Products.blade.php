@@ -7,7 +7,7 @@
 
     @foreach($products as $product)
         <div class="prods">
-        <a href="Product.blade.php">
+        <a href="product/">
             <h2>{{ $product->name }}</h2>
             <p><img src="{{ $product->image }}"/></p>
             <p>{{ $product->description }}</p>

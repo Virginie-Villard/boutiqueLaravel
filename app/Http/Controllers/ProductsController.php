@@ -15,8 +15,11 @@ class ProductsController extends Controller
 
     public function showProduct($id)
     {
-        $products = DB::table('products')->get()->where(['id'=>$id]);
-        return view('Products', ['id'=>$id])->with('id', $id);
+        // @see : https://blog.quickadminpanel.com/5-ways-to-use-raw-database-queries-in-laravel/
+        // @see : https://laravel.com/docs/4.2/queries#selects !!!
+
+        $productById = DB::table('products')->where('id', $id)->first();
+        return view('Product', ['product'=>$productById]);
     }
 }
 
