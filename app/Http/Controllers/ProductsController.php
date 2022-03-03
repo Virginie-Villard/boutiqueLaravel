@@ -36,7 +36,23 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+           'name'=>'required',
+           'description'=>'required',
+            'price'=>'required',
+            'image'=>'required'
+        ]);
+
+        $product = new Product([
+            'name'=>$request->get('name'),
+            'description'=>$request->get('description'),
+            'price'=>$request->get('price'),
+            'image'=>$request->get('image')
+        ]);
+
+        $product->save();
+
+        return redirect('/products');
     }
 
     /**
@@ -74,7 +90,9 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+//        $product = Product::find($id);
+//
+//        return view('product.edit', 'product');
     }
 
     /**
