@@ -9,6 +9,7 @@ class CreateProductsTable extends Migration
     /**
      * Run the migrations.
      *
+     * @see https://laravel.com/docs/8.x/migrations !!!
      * @return void
      */
     public function up()
