@@ -49,3 +49,29 @@ h2:hover
 }
 
 
+.button
+{
+    height: 40px;
+}
+
+#crud
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 10px;
+}
+
+#newProduct
+{
+    display: flex;
+    align-content: space-between;
+    gap:10px;
+    margin-bottom: 100PX;
+    font-size: 0.7em;
+    /*flex-grow: 4;*/
+    /*flex-shrink: 3;*/
+}
+
+
+
