@@ -19,10 +19,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      *
+     * @see : https://laravel-news.com/laravel-5-4-key-too-long-error
      * @return void
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
     }
 }
