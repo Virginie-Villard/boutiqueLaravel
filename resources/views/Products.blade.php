@@ -5,6 +5,14 @@
 @section('content')
     <h1>Products list</h1>
 
+    <select name="sortProducts" id="sortProducts">
+        <option value="sortByName">Sort by Name</option>
+
+
+
+        <option value="sortByPrice">Sort by Price</option>
+    </select>
+
     @foreach($products as $product)
         <div class="prods">
         <a href="product/{{$product->id}}">

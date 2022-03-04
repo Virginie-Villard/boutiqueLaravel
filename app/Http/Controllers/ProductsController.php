@@ -63,7 +63,7 @@ class ProductsController extends Controller
      */
     public function show()
     {
-        $products = DB::table('products')->get();
+        $products = DB::table('products')->get()->sortBy('name');
         return view('Products', ['products'=>$products]);
     }
 
@@ -117,5 +117,11 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function sortByPrice()
+    {
+        $product = Product::all()->sortBy('price');
+        return view('Products', ['products' => $product]);
     }
 }

@@ -20,6 +20,8 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'show']);
 
+Route::get('/products/sortByPrice', [ProductsController::class, 'sortByPrice']);
+
 Route::get('/products', [ProductsController::class, 'show']);
 
 Route::get('/product/{id}', [ProductsController::class, 'showProduct']);
