@@ -19,19 +19,9 @@ class ProductsController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
 
     /**
-     * Display products
+     * Display products sorts by name
      *
      * @return \Illuminate\Http\Response
      */
@@ -39,6 +29,17 @@ class ProductsController extends Controller
     {
         $products = DB::table('products')->get()->sortBy('name');
         return view('Products', ['products'=>$products]);
+    }
+
+    /**
+     * Display products sorts by price
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sortByPrice()
+    {
+        $product = Product::all()->sortBy('price');
+        return view('Products', ['products' => $product]);
     }
 
     /**
@@ -68,12 +69,5 @@ class ProductsController extends Controller
 //        $product = Product::find($id);
 //
 //        return view('product.edit', 'product');
-    }
-
-
-    public function sortByPrice()
-    {
-        $product = Product::all()->sortBy('price');
-        return view('Products', ['products' => $product]);
     }
 }
