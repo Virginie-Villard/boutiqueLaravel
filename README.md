@@ -9,7 +9,11 @@
 
 ## About Images
 
-Meci à ce site pour les images : https://deavita.fr/decoration-interieur/tendances-deco-2022-399673/
+Merci à ces sites pour les images : 
+
+https://deavita.fr/decoration-interieur/tendances-deco-2022-399673/
+
+https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decoration-interieure-4-etapes-fp-296706.html
 
 ## About Laravel
 

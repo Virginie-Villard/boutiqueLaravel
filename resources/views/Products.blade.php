@@ -3,15 +3,15 @@
 @section('title', 'Products list')
 
 @section('content')
-    <h1>Products list</h1>
+    <div class="titleLists">
+        <h1>Products list</h1>
 
-    <select name="sortProducts" id="sortProducts">
-        <option value="sortByName">Sort by Name</option>
+        <select name="sortProducts" id="sortProducts">
+            <option value="sortByName">Sort by Name</option>
 
-
-
-        <option value="sortByPrice">Sort by Price</option>
-    </select>
+            <option value="sortByPrice">Sort by Price</option>
+        </select>
+    </div>
 
     @foreach($products as $product)
         <div class="prods">
@@ -24,42 +24,5 @@
         </div>
     @endforeach
 @stop
-
-<style>
-
-    .prods
-    {
-        margin-bottom: 150px;
-    }
-
-    .price
-    {
-        font-size: 20px;
-        color: #067606;
-        font-weight: bold;
-    }
-
-    h2
-    {
-        color: #067606;
-    }
-
-    p
-    {
-        color: black;
-    }
-
-    a:link
-    {
-        text-decoration: none;
-    }
-
-    h2:hover
-    {
-        text-decoration: rgba(25, 181, 25, 0.28);
-        text-decoration-thickness: 10px;
-    }
-
-</style>
 
 

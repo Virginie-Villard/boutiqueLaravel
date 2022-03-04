@@ -1,4 +1,4 @@
-
+/* ___General________________________ */
 
 .prods
 {
@@ -33,7 +33,19 @@ h2:hover
     text-decoration-thickness: 10px;
 }
 
+/* ___Elements______________________________ */
 
-/**
-TODO : class active conditionnelle de la navbar
- */
+.titleLists
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#sortProducts
+{
+    margin : 40px 0;
+    width: 160px;
+}
+
+
