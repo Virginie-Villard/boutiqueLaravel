@@ -26,9 +26,11 @@
                 @csrf
                     <input type="image" src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"
                            value="delete" alt="delete" class="button">
+{{--                    https://www.direct-signaletique.com/I-Grande-10792-plaque-de-porte-icone-local-poubelles.net.jpg --}}
 
                     <input type="image" src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
                        value="update" alt="update" class="button">
+            </form>
 
         </a>
         </div>
@@ -56,5 +58,11 @@
         </form>
     </div>
 @stop
+
+
+
+{{--https://img.wtvideo.com/images/original/12981.jpg
+fauteuil en carton...
+--}}
 
 

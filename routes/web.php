@@ -29,4 +29,4 @@ Route::get('/product/{id}', [ProductsController::class, 'showProduct']);
 Route::get('/cart', [CartController::class, 'show']);
 
 
-Route::post('products',[ProductsController::class, 'store']);
+Route::post('/backoffice',[BackofficeController::class, 'store']);

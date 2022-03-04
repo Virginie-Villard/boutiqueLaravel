@@ -29,32 +29,6 @@ class ProductsController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
-     */
-    public function store(Request $request)
-    {
-        $request->validate([
-           'name'=>'required',
-           'description'=>'required',
-            'price'=>'required',
-            'image'=>'required'
-        ]);
-
-        $product = new Product([
-            'name'=>$request->get('name'),
-            'description'=>$request->get('description'),
-            'price'=>$request->get('price'),
-            'image'=>$request->get('image')
-        ]);
-
-        $product->save();
-
-        return redirect('/products')->with('success', 'New Product Created');
-    }
 
     /**
      * Display products
@@ -96,28 +70,6 @@ class ProductsController extends Controller
 //        return view('product.edit', 'product');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     public function sortByPrice()
     {
