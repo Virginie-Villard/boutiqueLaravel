@@ -7,6 +7,13 @@
 
     <h2>Add a new product</h2>
 
+    @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+
+    @endif
+
     <div class=newProduct>
 
         <form action="{{ url('backoffice/store') }}" method="POST">
@@ -33,6 +40,8 @@
         <table class="backofficeTable">
 
 {{--        Tableau de produits --}}
+
+{{--            Entête de tableau--}}
         <thead>
         <tr>
             <th> Product Name</th>
@@ -44,6 +53,7 @@
         </tr>
         </thead>
 
+{{--            Boucle qui remplit le corps du tableau --}}
         <tbody>
 
         @foreach($products as $product)
@@ -55,8 +65,9 @@
                 <td> {{ $product->image }} €</td>
 
 
+{{--                Bouton update pour chaque produit --}}
                 <td>
-                    <form class="crud" action="{{ url('backoffice/edit') }}" method="GET">
+                    <form class="crud" action="{{ url('backoffice/update') }}" method="GET">
                         @csrf
                         <input class="crud" type="image"
                                src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
@@ -67,8 +78,10 @@
 
                 <td>
 
-                    <form class="crud" action="{{ url('backoffice/delete') }}" method="GET">
+{{--                    Bouton delete pour chaque produit --}}
+                    <form class="crud" action="{{ url('backoffice/destroy", $product->id)) }}" method="POST">
                         @csrf
+{{--                        @method('DELETE')--}}
                         <input type="image"
                                src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"
                                value="delete" alt="delete" class="button">
@@ -87,4 +100,4 @@
     </form>
     </div>
 
-@stop
+

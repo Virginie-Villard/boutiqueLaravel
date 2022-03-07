@@ -29,16 +29,13 @@ Route::get('/product/{id}', [ProductsController::class, 'showProduct']);
 
 Route::get('/cart', [CartController::class, 'show']);
 
+//___Backoffice_________________
 
 Route::get('/backoffice',[BackofficeController::class, 'index']);
 
-//Route::get('/backoffice/create',[BackofficeController::class, 'create']);
-
 Route::post('/backoffice/store',[BackofficeController::class, 'store']);
-
-Route::get('/backoffice/edit',[BackofficeController::class, 'edit']);
 
 Route::put('/backoffice/update',[BackofficeController::class, 'update']);
 
-Route::delete('/backoffice/delete',[BackofficeController::class, 'delete']);
+Route::post('/backoffice/destroy',[BackofficeController::class, 'destroy']);
 

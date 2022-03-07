@@ -20,18 +20,6 @@ class BackofficeController extends Controller
         return view('/backoffice', ['products'=>$products]);
     }
 
-//    /**
-//     * Show the form for creating a new resource.
-//     *
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function create()
-//    {
-//        $products = DB::table('products')->get();
-//        return view('Backoffice', ['products'=>$products]);
-//    }
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -56,20 +44,8 @@ class BackofficeController extends Controller
 
         $product->save();
 
-        return redirect('/backoffice')->with('success', 'New Product Created');
+        return redirect('/backoffice')->with(['success'=>'New Product Created']);
     }
-
-//    /**
-//     * Show the form for editing the specified resource.
-//     *
-//     * @param  int  $id
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function edit($id)
-//    {
-//        $product = Product::findOrFail($id);
-//        return view('backoffice/edit', compact('product')); // cf 'product'
-//    }
 
     /**
      * Update the specified resource in storage.
@@ -100,6 +76,9 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
+//        $product = Product::findOrFail($id);
+//        $product->destroy();
+
         $product = Product::findOrFail($id);
         $product->delete();
 
