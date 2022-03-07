@@ -9,7 +9,9 @@
 
     <div class=newProduct>
 
-        <form acton="{{ url('backoffice') }}" method="POST">
+        <form action="{{ url('backoffice/store') }}" method="POST">
+
+            @csrf
 
             <label for="name">Product name :</label>
             <input type="text" id="name" name="name" required
@@ -26,10 +28,9 @@
 
             <input type="submit" name="addNew" value="Add new product">
 
-            <table class="backofficeTable">
-
         </form>
 
+        <table class="backofficeTable">
 
 {{--        Tableau de produits --}}
         <thead>
@@ -50,12 +51,12 @@
             <tr>
                 <td> {{ $product->name }} </td>
                 <td> {{ $product->description }} </td>
-                <td> {{ $product->price }} </td>
+                <td> {{ $product->price.' €' }} </td>
                 <td> {{ $product->image }} €</td>
 
 
                 <td>
-                    <form class="crud" action="{{ url('backoffice/update') }}" method="POST">
+                    <form class="crud" action="{{ url('backoffice/edit') }}" method="GET">
                         @csrf
                         <input class="crud" type="image"
                                src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
@@ -66,7 +67,7 @@
 
                 <td>
 
-                    <form class="crud" action="{{ url('backoffice/delete') }}" method="POST">
+                    <form class="crud" action="{{ url('backoffice/delete') }}" method="GET">
                         @csrf
                         <input type="image"
                                src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"

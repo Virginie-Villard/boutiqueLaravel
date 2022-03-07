@@ -15,7 +15,10 @@ class CreateBackofficesTable extends Migration
     {
         Schema::create('backoffices', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->text('description');
+            $table->integer('price');
+            $table->string('image');
         });
     }
 

@@ -32,7 +32,7 @@ Route::get('/cart', [CartController::class, 'show']);
 
 Route::get('/backoffice',[BackofficeController::class, 'index']);
 
-Route::get('/backoffice/create',[BackofficeController::class, 'create']);
+//Route::get('/backoffice/create',[BackofficeController::class, 'create']);
 
 Route::post('/backoffice/store',[BackofficeController::class, 'store']);
 
@@ -40,5 +40,5 @@ Route::get('/backoffice/edit',[BackofficeController::class, 'edit']);
 
 Route::put('/backoffice/update',[BackofficeController::class, 'update']);
 
-Route::get('/backoffice/delete',[BackofficeController::class, 'delete']);
+Route::delete('/backoffice/delete',[BackofficeController::class, 'delete']);
 

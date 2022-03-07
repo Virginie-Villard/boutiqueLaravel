@@ -10,17 +10,6 @@ use Illuminate\Support\Facades\DB;
 class ProductsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-
-    /**
      * Display products sorts by name
      *
      * @return \Illuminate\Http\Response
@@ -28,7 +17,7 @@ class ProductsController extends Controller
     public function show()
     {
         $products = DB::table('products')->get()->sortBy('name');
-        return view('Products', ['products'=>$products]);
+        return view('Products', ['products' => $products]);
     }
 
     /**
@@ -55,19 +44,7 @@ class ProductsController extends Controller
     {
         $product = Product::find($id);
 
-        return view('Product', ['product'=>$product]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-//        $product = Product::find($id);
-//
-//        return view('product.edit', 'product');
+        return view('Product', ['product' => $product]);
     }
 }
+

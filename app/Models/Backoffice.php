@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Backoffice extends Model
 {
-    use HasFactory;
+    public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'image'
+    ];
 }

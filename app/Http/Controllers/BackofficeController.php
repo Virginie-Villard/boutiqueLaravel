@@ -17,19 +17,19 @@ class BackofficeController extends Controller
     {
         $products = DB::table('products')->get()->sortBy('name');
         $product = Product::all();
-        return view('/backoffice');
+        return view('/backoffice', ['products'=>$products]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $products = DB::table('products')->get();
-        return view('Backoffice', ['products'=>$products]);
-    }
+//    /**
+//     * Show the form for creating a new resource.
+//     *
+//     * @return \Illuminate\Http\Response
+//     */
+//    public function create()
+//    {
+//        $products = DB::table('products')->get();
+//        return view('Backoffice', ['products'=>$products]);
+//    }
 
 
     /**
@@ -56,31 +56,20 @@ class BackofficeController extends Controller
 
         $product->save();
 
-        return redirect('/products')->with('success', 'New Product Created');
+        return redirect('/backoffice')->with('success', 'New Product Created');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $product = Product::find($id);
-        return view('backoffice/edit', compact('product'));
-    }
+//    /**
+//     * Show the form for editing the specified resource.
+//     *
+//     * @param  int  $id
+//     * @return \Illuminate\Http\Response
+//     */
+//    public function edit($id)
+//    {
+//        $product = Product::findOrFail($id);
+//        return view('backoffice/edit', compact('product')); // cf 'product'
+//    }
 
     /**
      * Update the specified resource in storage.
@@ -91,7 +80,7 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
 
         $product->name = $request->input('name');
         $product->description = $request->input('description');
@@ -100,7 +89,7 @@ class BackofficeController extends Controller
 
         $product->update();
 
-        return redirect()->back()->with('status', 'Product Updated Successfully');
+        return redirect()->back()->with('status', 'Product Updated Successfully'); // cf 'product'
     }
 
     /**
@@ -111,6 +100,9 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
-        Product::where('id', $id)->delete();
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect('/backoffice')->with('success', 'Product is successfully deleted');
     }
 }
