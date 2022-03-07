@@ -55,7 +55,7 @@
 
 
                 <td>
-                    <form class="crud" action="{{ url('products') }}" method="POST">
+                    <form class="crud" action="{{ url('backoffice/update') }}" method="POST">
                         @csrf
                         <input class="crud" type="image"
                                src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
@@ -66,7 +66,7 @@
 
                 <td>
 
-                    <form class="crud" action="{{ url('products') }}" method="POST">
+                    <form class="crud" action="{{ url('backoffice/delete') }}" method="POST">
                         @csrf
                         <input type="image"
                                src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"

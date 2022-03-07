@@ -15,6 +15,7 @@ class BackofficeController extends Controller
      */
     public function index()
     {
+        $product = Product::all();
         return view('/backoffice');
     }
 
@@ -99,6 +100,6 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::where('id', $id)->delete();
     }
 }
