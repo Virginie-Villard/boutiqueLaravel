@@ -51,7 +51,7 @@ h2:hover
 
 .button
 {
-    height: 40px;
+    height: 30px;
 }
 
 #crud
@@ -79,6 +79,7 @@ h2:hover
 {
     table-layout: fixed;
     width: 100%;
+    margin : 60px 0;
 }
 
 .backofficeTable th {
@@ -106,3 +107,23 @@ h2:hover
     background-color: #f2f2f2;
 }
 
+thead
+{
+    border: 1px solid #ddd;
+}
+
+tr
+{
+    border:0px !important;
+}
+
+.crud
+{
+    text-align: right;
+    max-height: 30px;
+}
+
+tr .crud
+{
+    text-align: right;
+}
