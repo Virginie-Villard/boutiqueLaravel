@@ -19,7 +19,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/Backoffice">Products Management</a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/backoffice">Products Management</a>
                 </li>
 
             </ul>

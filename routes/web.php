@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\BackofficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,4 @@ Route::get('/product/{id}', [ProductsController::class, 'showProduct']);
 Route::get('/cart', [CartController::class, 'show']);
 
 
-Route::post('/backoffice',[BackofficeController::class, 'store']);
+Route::get('/backoffice',[BackofficeController::class, 'index']);
