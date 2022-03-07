@@ -27,7 +27,8 @@
                     <input type="image" src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"
                            value="delete" alt="delete" class="button">
 {{--                    https://www.direct-signaletique.com/I-Grande-10792-plaque-de-porte-icone-local-poubelles.net.jpg
-                        https://appdividend.com/2022/01/26/laravel-8-crud/ --}}
+                        https://appdividend.com/2022/01/26/laravel-8-crud/
+                        TODO : Conditionnel au fait d'être admin ? --}}
 
                     <input type="image" src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
                        value="update" alt="update" class="button">
@@ -36,27 +37,6 @@
         </a>
         </div>
     @endforeach
-
-    <h3>Add a new product</h3>
-
-    <div id="newProduct">
-        <form acton="{{ url('backoffice') }}" method="POST">
-            @csrf
-            <label for="name" name="name">Product Name :   </label>
-            <input type="text" name="name">
-
-            <label for="description" name="description">Product Description :   </label>
-            <input type="text" name="description">
-
-            <label for="price" name="price">Product Price :   </label>
-            <input type="text" name="price">
-
-            <label for="image" name="image">Product Image :   </label>
-            <input type="text" name="image">
-
-            <input type="submit" name="addNew" value="Add new product">
-
-        </form>
     </div>
 @stop
 

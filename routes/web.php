@@ -31,3 +31,8 @@ Route::get('/cart', [CartController::class, 'show']);
 
 
 Route::get('/backoffice',[BackofficeController::class, 'index']);
+
+Route::get('/backoffice',[BackofficeController::class, 'create']);
+
+Route::post('/backoffice',[BackofficeController::class, 'store']);
+

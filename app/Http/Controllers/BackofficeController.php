@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BackofficeController extends Controller
 {
@@ -24,8 +25,10 @@ class BackofficeController extends Controller
      */
     public function create()
     {
-        //
+        $products = DB::table('products')->get();
+        return view('Backoffice', ['products'=>$products]);
     }
+
 
     /**
      * Store a newly created resource in storage.

@@ -33,7 +33,7 @@ h2:hover
     text-decoration-thickness: 10px;
 }
 
-/* ___Elements______________________________ */
+/* ___Elements_Products____________________ */
 
 .titleLists
 {
@@ -73,5 +73,36 @@ h2:hover
     /*flex-shrink: 3;*/
 }
 
+/* ___Elements_Backoffice_table_____________ */
 
+.backofficeTable
+{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.backofficeTable th {
+    background-color: rgba(25, 181, 25, 0.28);
+}
+
+.backofficeTable td, #customers th {
+    border: 1px solid #ddd;
+    padding-right: 8px;
+}
+
+.backofficeTable tr, td {
+    border: solid;
+}
+
+.backofficeTable td {
+    border: 1px solid #ddd;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.backofficeTable tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
 
