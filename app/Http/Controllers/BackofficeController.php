@@ -77,7 +77,8 @@ class BackofficeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('backoffice/edit', compact('product'));
     }
 
     /**
@@ -89,7 +90,16 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->image = $request->input('image');
+
+        $product->update();
+
+        return redirect()->back()->with('status', 'Product Updated Successfully')
     }
 
     /**
