@@ -15,6 +15,7 @@ class BackofficeController extends Controller
      */
     public function index()
     {
+        $products = DB::table('products')->get()->sortBy('name');
         $product = Product::all();
         return view('/backoffice');
     }
@@ -99,7 +100,7 @@ class BackofficeController extends Controller
 
         $product->update();
 
-        return redirect()->back()->with('status', 'Product Updated Successfully')
+        return redirect()->back()->with('status', 'Product Updated Successfully');
     }
 
     /**
