@@ -79,7 +79,7 @@ class BackofficeController extends Controller
 
         $product->update();
 
-        return redirect('backoffice')->with('status', 'Product Updated Successfully');
+        return redirect('backoffice')->with('success', 'Product Updated Successfully');
     }
 
     /**

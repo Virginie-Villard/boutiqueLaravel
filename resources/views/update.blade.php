@@ -18,7 +18,7 @@
 
     <div class=updateProduct>
 
-        <form action="{{ url('backoffice/update') }}" method="POST">
+        <form action="{{ route('update', $product->id) }}" method="POST">
 
             @csrf
             @method('PATCH')
@@ -36,7 +36,7 @@
             <label for="image">Product image URL :</label>
             <input type="text" id="image" name="image" required> <br/>
 
-            <input class="validate" type="submit" name="addNew" value="Update product">
+            <input class="validate" type="submit" name="update" value="Update product">
 
         </form>
     </div>

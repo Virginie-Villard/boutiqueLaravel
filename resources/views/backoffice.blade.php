@@ -70,7 +70,6 @@
                     <form class="crud" action="{{ route('edit', $product->id) }}" method="GET">
                         @csrf
 
-
                         <input class="crud button" type="image"
                                src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
                                value="update" alt="update">
