@@ -62,16 +62,16 @@
                 <td> {{ $product->name }} </td>
                 <td> {{ $product->description }} </td>
                 <td> {{ $product->price.' €' }} </td>
-                <td> {{ $product->image }} €</td>
+                <td> {{ $product->image }} </td>
 
 
 {{--                Bouton update pour chaque produit --}}
                 <td>
                     <form class="crud" action="{{ url('backoffice/update') }}" method="GET">
                         @csrf
-                        <input class="crud" type="image"
+                        <input class="crud button" type="image"
                                src="https://www.pngkit.com/png/full/84-845323_update-icon-update-icon.png"
-                               value="update" alt="update" class="button">
+                               value="update" alt="update">
                     </form>
 
                 </td>
@@ -79,7 +79,7 @@
                 <td>
 
 {{--                    Bouton delete pour chaque produit --}}
-                    <form class="crud" action="{{ url('backoffice/destroy", $product->id)) }}" method="POST">
+                    <form class="crud" action="{{ url('backoffice/destroy', $product->id) }}" method="POST">
                         @csrf
 {{--                        @method('DELETE')--}}
                         <input type="image"
@@ -97,7 +97,4 @@
     </table>
     </div>
 
-    </form>
-    </div>
-
-
+@endsection
