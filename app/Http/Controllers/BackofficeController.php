@@ -15,8 +15,8 @@ class BackofficeController extends Controller
      */
     public function index()
     {
-        $products = DB::table('products')->get()->sortBy('name');
-        $product = Product::all();
+        $products = DB::table('products')->get()->sortBy('name'); // change >> model
+        $product = Product::all(); // change >> model !
         return view('/backoffice', ['products'=>$products]);
     }
 
