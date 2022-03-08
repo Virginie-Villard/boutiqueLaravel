@@ -48,6 +48,20 @@ class BackofficeController extends Controller
     }
 
     /**
+     * Show the form for editing specified resource.
+     *
+     * @param int $id
+     * @returns
+     */
+    public function edit ($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('update',  ['product'=>$product]);
+    }
+
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -65,7 +79,7 @@ class BackofficeController extends Controller
 
         $product->update();
 
-        return redirect()->back()->with('status', 'Product Updated Successfully'); // cf 'product'
+        return redirect('backoffice')->with('status', 'Product Updated Successfully');
     }
 
     /**
@@ -76,13 +90,7 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
-//        $product = Product::findOrFail($id);
-//        dd($product);
-//        $product->delete();
-
-//        return redirect('/backoffice')->with('success', 'Product is successfully deleted');
-
         Product::destroy($id);
-        return redirect('backoffice');
+        return redirect('backoffice')->with('success', 'Product is successfully deleted');
     }
 }

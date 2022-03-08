@@ -73,9 +73,9 @@ h2:hover
     /*flex-shrink: 3;*/
 }
 
-/* ___Elements_Backoffice_table_____________ */
+/* ___Elements_Backoffice_tables_____________ */
 
-.backofficeTable
+.backofficeTable, .displayProduct
 {
     table-layout: fixed;
     width: 100%;
@@ -86,16 +86,19 @@ h2:hover
     background-color: rgba(25, 181, 25, 0.28);
 }
 
-.backofficeTable td, #customers th {
+.backofficeTable td, #customers th, .displayProduct td
+{
     border: 1px solid #ddd;
     padding-right: 8px;
 }
 
-.backofficeTable tr, td {
+.backofficeTable tr, td, .displayProduct tr, .displayProduct td
+{
     border: solid;
 }
 
-.backofficeTable td {
+.backofficeTable td, .displayProduct td
+{
     border: 1px solid #ddd;
     overflow: hidden;
     white-space: nowrap;
@@ -126,6 +129,11 @@ tr
 tr .crud
 {
     text-align: right;
+}
+
+.displayProduct
+{
+    background: rgba(25, 181, 25, 0.28);
 }
 
  /*___Form_Button__________________*/

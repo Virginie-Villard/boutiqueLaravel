@@ -35,7 +35,8 @@ Route::get('/backoffice',[BackofficeController::class, 'index']);
 
 Route::post('/backoffice/store',[BackofficeController::class, 'store']);
 
-Route::put('/backoffice/update',[BackofficeController::class, 'update']);
+Route::get('/backoffice/edit/{id}',[BackofficeController::class, 'edit'])->name('edit');
+
+Route::patch('/backoffice/update/{id}',[BackofficeController::class, 'update'])->name('update');
 
 Route::get('/backoffice/destroy/{id}',[BackofficeController::class, 'destroy'])->name('delete');
-//Route::get('backoffice/delete/{id}', [BackofficeController::class, 'destroy'])->name('delete');
