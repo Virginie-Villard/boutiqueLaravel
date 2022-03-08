@@ -40,3 +40,5 @@ Route::get('/backoffice/edit/{id}',[BackofficeController::class, 'edit'])->name(
 Route::patch('/backoffice/update/{id}',[BackofficeController::class, 'update'])->name('update');
 
 Route::get('/backoffice/destroy/{id}',[BackofficeController::class, 'destroy'])->name('delete');
+
+//___Category_________________
