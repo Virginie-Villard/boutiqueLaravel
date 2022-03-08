@@ -33,6 +33,8 @@
             <label for="image">Product image URL :</label>
             <input type="text" id="image" name="image" required> <br/>
 
+            @extends(Layouts.Layouts.categories)
+
             <input class="validate" type="submit" name="addNew" value="Add new product">
 
         </form>
@@ -63,7 +65,6 @@
                 <td> {{ $product->description }} </td>
                 <td> {{ $product->price.' €' }} </td>
                 <td> {{ $product->image }} </td>
-
 
 {{--                Bouton update pour chaque produit --}}
                 <td>
