@@ -33,7 +33,7 @@
             <label for="image">Product image URL :</label>
             <input type="text" id="image" name="image" required> <br/>
 
-            <input type="submit" name="addNew" value="Add new product">
+            <input class="validate" type="submit" name="addNew" value="Add new product">
 
         </form>
 
@@ -79,14 +79,15 @@
                 <td>
 
 {{--                    Bouton delete pour chaque produit --}}
-                    <form class="crud" action="{{ url('backoffice/destroy', $product->id) }}" method="POST">
+                    <form class="crud" action="{{ route('delete', $product->id) }}" method="GET">
                         @csrf
-{{--                        @method('DELETE')--}}
+                        @method('DELETE')
                         <input type="image"
                                src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-trash-icon-png-image_3991578.jpg"
                                value="delete" alt="delete" class="button">
                         {{--                    https://www.direct-signaletique.com/I-Grande-10792-plaque-de-porte-icone-local-poubelles.net.jpg
                                                 https://appdividend.com/2022/01/26/laravel-8-crud/ --}}
+
                     </form>
                 </td>
             </tr>

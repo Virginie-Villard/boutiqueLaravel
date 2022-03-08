@@ -127,3 +127,17 @@ tr .crud
 {
     text-align: right;
 }
+
+ /*___Form_Button__________________*/
+
+.validate
+{
+    background: rgba(25, 181, 25, 0.28);
+    border: 1px solid rgb(25, 181, 25);
+}
+
+.validate:hover
+{
+    background: rgba(25, 181, 25, 0.40);
+    border: 1px solid rgb(25, 181, 25);
+}

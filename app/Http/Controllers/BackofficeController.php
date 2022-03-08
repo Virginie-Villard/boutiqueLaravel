@@ -77,11 +77,12 @@ class BackofficeController extends Controller
     public function destroy($id)
     {
 //        $product = Product::findOrFail($id);
-//        $product->destroy();
+//        dd($product);
+//        $product->delete();
 
-        $product = Product::findOrFail($id);
-        $product->delete();
+//        return redirect('/backoffice')->with('success', 'Product is successfully deleted');
 
-        return redirect('/backoffice')->with('success', 'Product is successfully deleted');
+        Product::destroy($id);
+        return redirect('backoffice');
     }
 }
