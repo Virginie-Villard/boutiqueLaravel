@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,8 +17,9 @@ class BackofficeController extends Controller
     public function index()
     {
         $products = Product::all()->sortBy('name');
-//        dd($products);
-        return view('/backoffice', ['products'=>$products]);
+        $categories = Category::all();
+        // $products = Product::find(1);
+        return view('/backoffice', ['products'=>$products, 'categories'=>$categories]);
     }
 
     /**

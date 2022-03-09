@@ -23,17 +23,17 @@
             @csrf
 
             <label for="name">Product name :</label>
-            <input type="text" id="name" name="name" required
+            <input type="text" id="name" name="name"
                    minlength="1" maxlength="255"> <br/>
 
             <label for="description">Product description :</label>
-            <input type="text" id="description" name="description" required> <br/>
+            <input type="text" id="description" name="description"> <br/>
 
             <label for="price">Product price :</label>
-            <input type="text" id="price" name="price" required> <br/>
+            <input type="text" id="price" name="price"> <br/>
 
             <label for="image">Product image URL :</label>
-            <input type="text" id="image" name="image" required> <br/>
+            <input type="text" id="image" name="image"> <br/>
 
             <div id="categoriesChoice">
 
@@ -41,13 +41,13 @@
                     Choose Product Categories :
                 </p>
 
-{{--                @foreach($products->categories as $category)--}}
+                @foreach($categories as $category)
 
-{{--                    <input type="checkbox" name="{{ $category->name }}">--}}
-{{--                        {{ $category->name }}--}}
-{{--                    <input>--}}
+                    <input type="checkbox" name="{{ $category->name }}">
+                        {{ $category->name }}
+                    </input>
 
-{{--                @endforeach--}}
+                @endforeach
             </div>
 
 
