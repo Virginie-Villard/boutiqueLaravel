@@ -16,8 +16,8 @@ class ProductsController extends Controller
      */
     public function show()
     {
-        $products = DB::table('products')->get()->sortBy('name');
-        return view('Products', ['products' => $products]);
+        $product = Product::all()->sortBy('name');
+        return view('Products', ['products' => $product]);
     }
 
     /**

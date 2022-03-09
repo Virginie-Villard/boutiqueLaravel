@@ -14,12 +14,19 @@
     </div>
 
     @foreach($products as $product)
+
         <div class="prods">
         <a href="product/{{$product->id}}">
             <h2>{{ $product->name }}</h2>
             <p><img src="{{ $product->image }}"/></p>
             <p>{{ $product->description }}</p>
             <p class="price">{{ $product->price }} €</p>
+
+            <ul> Categories :
+                @foreach($product->categories as $category)
+                    <li>{{ $category->name }}</li>
+                @endforeach
+            </ul>
 
         </a>
         </div>

@@ -14,6 +14,8 @@
 
     @endif
 
+
+{{--    Form to add a new Product --}}
     <div class=newProduct>
 
         <form action="{{ url('backoffice/store') }}" method="POST">
@@ -33,7 +35,21 @@
             <label for="image">Product image URL :</label>
             <input type="text" id="image" name="image" required> <br/>
 
-            @extends(Layouts.Layouts.categories)
+            <div id="categoriesChoice">
+
+                <p>
+                    Choose Product Categories :
+                </p>
+
+{{--                @foreach($products->categories as $category)--}}
+
+{{--                    <input type="checkbox" name="{{ $category->name }}">--}}
+{{--                        {{ $category->name }}--}}
+{{--                    <input>--}}
+
+{{--                @endforeach--}}
+            </div>
+
 
             <input class="validate" type="submit" name="addNew" value="Add new product">
 
@@ -50,6 +66,7 @@
             <th> Product Description</th>
             <th> Product Price</th>
             <th> Product Image URL</th>
+            <th> Product categories</th>
             <th></th>
             <th></th>
         </tr>
@@ -65,6 +82,15 @@
                 <td> {{ $product->description }} </td>
                 <td> {{ $product->price.' €' }} </td>
                 <td> {{ $product->image }} </td>
+
+
+                <td>
+                    @foreach($product->categories as $category)
+
+                        <span>{{ $category->name }} / </span>
+
+                    @endforeach
+                </td>
 
 {{--                Bouton update pour chaque produit --}}
                 <td>
