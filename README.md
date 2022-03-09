@@ -15,6 +15,24 @@ https://deavita.fr/decoration-interieur/tendances-deco-2022-399673/
 
 https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decoration-interieure-4-etapes-fp-296706.html
 
+## About Help I had
+
+### Help about Many to many, to display product(s) & in Backoffice
+@see : + https://www.youtube.com/watch?v=9aUvEgY6N_I 
+
+@see : + https://appdividend.com/2022/01/21/laravel-many-to-many-relationship/
+
+@see : https://laravel.sillo.org/cours-laravel-8-les-bases-formulaires-et-middlewares/
+
+@see : https://laracasts.com/discuss/channels/laravel/how-to-pass-multiple-variables-in-to-a-view-using-controller
+
+@see : + https://laravel.sillo.org/cours-laravel-8-les-donnees-la-relation-nn/
+
+@see : + https://laracasts.com/series/laravel-6-from-scratch/episodes/31
+
+@see : + https://www.google.com/search?q=form+%2B+many+to+many+%2B+laravel+8&ei=CJAoYu2uEIGMa8v3uqgD&ved=0ahUKEwjt0oj-9rj2AhUBxhoKHcu7DjUQ4dUDCA4&uact=5&oq=form+%2B+many+to+many+%2B+laravel+8&gs_lcp=Cgdnd3Mtd2l6EAMyCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjoHCAAQRxCwAzoGCAAQFhAeOggIABAIEA0QHkoECEEYAEoECEYYAFCLCFj3HmC4IWgBcAF4AIABWYgBpAeSAQIxMpgBAKABAcgBCMABAQ&sclient=gws-wiz#kpvalbx=_E5AoYuHwCOKRlwTwpL-oAw23  &nbsp;
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
