@@ -41,6 +41,8 @@
                     Choose Product Categories :
                 </p>
 
+{{--                Boucle qui affiche les différents choix à cocher de catégories depuis la BDD
+                    pour permettre la création d'un nouveau produit associé à ses catégories --}}
                 @foreach($categories as $category)
 
                     <input type="checkbox" name="{{ $category->name }}">
@@ -84,6 +86,7 @@
                 <td> {{ $product->image }} </td>
 
 
+{{--                __ Boucle qui remplit la case categories du tableau --}}
                 <td>
                     @foreach($product->categories as $category)
 
