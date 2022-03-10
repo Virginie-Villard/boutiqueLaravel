@@ -32,17 +32,17 @@
             @method('PATCH')
 
             <label for="name">Product name :</label>
-            <input type="text" id="name" name="name" required
-                   minlength="1" maxlength="255"> <br/>
+            <input type="text" id="name" name="name"
+                   minlength="1" maxlength="255" value="{{ $product->name }}"> <br/>
 
             <label for="description">Product description :</label>
-            <input type="text" id="description" name="description" required> <br/>
+            <input type="text" id="description" name="description" value="{{ $product->description }}"> <br/>
 
             <label for="price">Product price :</label>
-            <input type="text" id="price" name="price" required> <br/>
+            <input type="text" id="price" name="price" value="{{ $product->price }}"> <br/>
 
             <label for="image">Product image URL :</label>
-            <input type="text" id="image" name="image" required> <br/>
+            <input type="text" id="image" name="image" value="{{ $product->image }}"> <br/>
 
             <div id="categoriesChoice">
 
