@@ -36,6 +36,20 @@
             <label for="image">Product image URL :</label>
             <input type="text" id="image" name="image" required> <br/>
 
+            <div id="categoriesChoice">
+
+                <p>
+                    Product Categories :
+                </p>
+
+                @foreach($categories as $category)
+
+                    <input type="checkbox" name="category[]" value="{{ $category->id }}">
+                        {{ $category->name }}
+
+                @endforeach
+            </div>
+
             <input class="validate" type="submit" name="update" value="Update product">
 
         </form>
