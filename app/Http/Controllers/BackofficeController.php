@@ -76,6 +76,7 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $categories = Category::all();
         $product = Product::findOrFail($id);
 
         $product->name = $request->input('name');
@@ -88,7 +89,7 @@ class BackofficeController extends Controller
 
         $product->update();
 
-        return redirect('backoffice', ['products'=>$product])
+        return view('update', ['product'=>$product, 'categories'=>$categories])
             ->with('success', 'Product Updated Successfully');
     }
 
