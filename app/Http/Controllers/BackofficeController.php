@@ -44,6 +44,8 @@ class BackofficeController extends Controller
             'image'=>$request->get('image')
         ]);
 
+        $product->categories()->sync($request->input('categories', []));
+
         $product->save();
 
         return redirect('/backoffice')->with(['success'=>'New Product Created']);
