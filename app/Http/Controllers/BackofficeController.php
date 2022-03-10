@@ -75,6 +75,7 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // $categories = Category::all();
         $product = Product::findOrFail($id);
 
         $product->name = $request->input('name');
@@ -82,9 +83,15 @@ class BackofficeController extends Controller
         $product->price = $request->input('price');
         $product->image = $request->input('image');
 
+
+//        $product->categories()->sync($request->input('category'));
+
         $product->update();
 
-        return redirect('backoffice')->with('success', 'Product Updated Successfully');
+        return redirect('backoffice', ['products'=>$product
+//            , 'categories'=>$categories
+])
+            ->with('success', 'Product Updated Successfully');
     }
 
     /**
