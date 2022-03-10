@@ -12,6 +12,14 @@
             <td> {{ $product->name }} </td>
             <td> {{ $product->description }} </td>
             <td> {{ $product->price.' €' }} </td>
+            <td>
+
+                @foreach($product->categories as $category)
+
+                    <span>{{ $category->name }} / </span>
+
+                @endforeach
+            </td>
             <td> {{ $product->image }} </td>
         </tr>
     </table>

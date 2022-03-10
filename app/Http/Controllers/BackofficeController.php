@@ -60,9 +60,10 @@ class BackofficeController extends Controller
      */
     public function edit ($id)
     {
+        $categories = Category::all();
         $product = Product::findOrFail($id);
 
-        return view('update',  ['product'=>$product]);
+        return view('update',  ['product'=>$product, 'categories'=>$categories]);
     }
 
 
@@ -75,7 +76,6 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $categories = Category::all();
         $product = Product::findOrFail($id);
 
         $product->name = $request->input('name');
@@ -84,13 +84,11 @@ class BackofficeController extends Controller
         $product->image = $request->input('image');
 
 
-//        $product->categories()->sync($request->input('category'));
+        $product->categories()->sync($request->input('category'));
 
         $product->update();
 
-        return redirect('backoffice', ['products'=>$product
-//            , 'categories'=>$categories
-])
+        return redirect('backoffice', ['products'=>$product])
             ->with('success', 'Product Updated Successfully');
     }
 
