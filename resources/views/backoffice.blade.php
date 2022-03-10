@@ -45,7 +45,7 @@
                     pour permettre la création d'un nouveau produit associé à ses catégories --}}
                 @foreach($categories as $category)
 
-                    <input type="checkbox" name="{{ $category->name }}">
+                    <input type="checkbox" name="category[]" value="{{ $category->id }}">
                         {{ $category->name }}
                     </input>
 
