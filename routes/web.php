@@ -27,8 +27,6 @@ Route::get('/products', [ProductsController::class, 'show']);
 
 Route::get('/product/{id}', [ProductsController::class, 'showProduct']);
 
-Route::get('/cart', [CartController::class, 'show']);
-
 //___Backoffice_________________
 
 Route::get('/backoffice',[BackofficeController::class, 'index']);
@@ -41,4 +39,14 @@ Route::patch('/backoffice/update/{id}',[BackofficeController::class, 'update'])-
 
 Route::get('/backoffice/destroy/{id}',[BackofficeController::class, 'destroy'])->name('delete');
 
-//___Category_________________
+//___Cart_________________
+
+Route::get('/cart', [CartController::class, 'show']); //cartList
+
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store'); //cartStore
+
+Route::post('update-cart', [CartController::class, 'update'])->name('cart.update'); // cartUpdate
+
+Route::post('destroy', [CartController::class, 'destroy'])->name('cart.destroy'); // removeCart
+
+Route::post('clear', [CartController::class, 'clearAll'])->name('cart.clear'); // clearAllCart
