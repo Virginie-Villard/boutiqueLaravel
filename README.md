@@ -32,6 +32,8 @@ https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decorati
 
 @see : + https://www.google.com/search?q=form+%2B+many+to+many+%2B+laravel+8&ei=CJAoYu2uEIGMa8v3uqgD&ved=0ahUKEwjt0oj-9rj2AhUBxhoKHcu7DjUQ4dUDCA4&uact=5&oq=form+%2B+many+to+many+%2B+laravel+8&gs_lcp=Cgdnd3Mtd2l6EAMyCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjoHCAAQRxCwAzoGCAAQFhAeOggIABAIEA0QHkoECEEYAEoECEYYAFCLCFj3HmC4IWgBcAF4AIABWYgBpAeSAQIxMpgBAKABAcgBCMABAQ&sclient=gws-wiz#kpvalbx=_E5AoYuHwCOKRlwTwpL-oAw23  &nbsp;
 
+@see : + https://laravel.com/docs/9.x/collections#method-pluck
+
 
 ## About Laravel
 

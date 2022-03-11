@@ -50,17 +50,24 @@
                     Product Categories :
                 </p>
 
+
+
                 @foreach($categories as $category)
 
-                    <input type="checkbox" name="category[]" value="{{ $category->id }}"
-                        {{ old('$category') == 'on' ? 'checked' : '' }}>
+                     @if(in_array($category->id, $product->categories->pluck('id')->toArray()))
+                        <input type="checkbox" name="category[]" value="{{ $category->id }}"
+                               checked/>
+                             {{ $category->name }}
+                    @else
+                        <input type="checkbox" name="category[]" value="{{ $category->id }}"/>
                         {{ $category->name }}
+                    @endif
 
-                @endforeach
-            </div>
+                    @endforeach
+                </div>
 
-            <input class="validate" type="submit" name="update" value="Update product">
+                <input class="validate" type="submit" name="update" value="Update product">
 
-        </form>
-    </div>
-@endsection
+            </form>
+        </div>
+    @endsection
