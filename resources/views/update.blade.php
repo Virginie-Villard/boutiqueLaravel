@@ -52,7 +52,8 @@
 
                 @foreach($categories as $category)
 
-                    <input type="checkbox" name="category[]" value="{{ $category->id }}">
+                    <input type="checkbox" name="category[]" value="{{ $category->id }}"
+                        {{ old('$category') == 'on' ? 'checked' : '' }}>
                         {{ $category->name }}
 
                 @endforeach
