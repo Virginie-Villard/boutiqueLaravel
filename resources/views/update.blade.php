@@ -7,6 +7,19 @@
 
     <h2> {{ $product->name }} </h2>
 
+{{--    @if(session()->has('success'))--}}
+{{--        <div class="alert alert-success">--}}
+{{--            {{ session()->get('success') }}--}}
+{{--        </div>--}}
+{{--    @endif--}}
+
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
+
     <table class="displayProduct">
         <tr>
             <td> {{ $product->name }} </td>

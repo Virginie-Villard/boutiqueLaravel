@@ -34,6 +34,8 @@ https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decorati
 
 @see : + https://laravel.com/docs/9.x/collections#method-pluck
 
+@see : https://www.itsolutionstuff.com/post/laravel-8-flash-message-tutorial-exampleexample.html
+(cf to improve !)
 
 ## About Laravel
 
