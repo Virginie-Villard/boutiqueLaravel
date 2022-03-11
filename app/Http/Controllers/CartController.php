@@ -60,6 +60,11 @@ class CartController extends Controller
         $cartItems = \Cart::getContent();
         // dd($cartItems);
         return view('cart', compact('cartItems'));
+
+//        $cart = Cart::find(1);
+//        $product = Product::find($id);
+//
+//        $cart->getProduct()->attach($product);
     }
 
     /**
