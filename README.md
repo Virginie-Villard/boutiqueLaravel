@@ -34,8 +34,15 @@ https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decorati
 
 @see : + https://laravel.com/docs/9.x/collections#method-pluck
 
+#### About success message to update a product with categories :
 @see : https://www.itsolutionstuff.com/post/laravel-8-flash-message-tutorial-exampleexample.html
 (cf to improve !)
+
+#### About Cart :
+
+@see : https://therealprogrammer.com/how-to-make-laravel-8-shopping-cart/
+
+
 
 ## About Laravel
 
