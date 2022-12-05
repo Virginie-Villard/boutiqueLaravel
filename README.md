@@ -22,6 +22,8 @@ Execute ``` php artisan serve ```
 
 Open localhost
 
+Open mySQL with Mamp
+
 ## About Help I had
 
 ### Help about Many to many, to display product(s) & in Backoffice
