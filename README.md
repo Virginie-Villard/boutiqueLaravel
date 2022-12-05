@@ -15,6 +15,13 @@ https://deavita.fr/decoration-interieur/tendances-deco-2022-399673/
 
 https://www.maison-travaux.fr/maison-travaux/conseils-pratiques/reussir-decoration-interieure-4-etapes-fp-296706.html
 
+## Open project
+Start application Mamp  
+
+Execute ``` php artisan serve ```
+
+Open localhost
+
 ## About Help I had
 
 ### Help about Many to many, to display product(s) & in Backoffice
@@ -99,3 +106,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Install project on Mac
+
+Install PHP 7.4.2  
+Install Brew  
+Install Composer  
+Install Mamp  
+Install Laravel  
+  composer install  
+  npm install  
+  Copy .env.example into .env and set variables  
+  php artisan key:generate
+or
+  php artisan key:generate --show  
+  
