@@ -22,7 +22,8 @@ Execute ``` php artisan serve ```
 
 Open localhost
 
-Open mySQL with Mamp
+Open mySQL with Mamp  
+http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&server=1&db=laravel
 
 ## About Help I had
 
